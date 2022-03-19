@@ -24,14 +24,14 @@ def get_data(path: str, name: str):
     return data
 
 
-def add_related_label(df: pandas.core.frame.DataFrame):
+def add_related_label(df: pd.core.frame.DataFrame):
     '''Adds column to dataframe whether body is related to stance'''
     df['related'] = np.where(df['Stance']!= 'unrelated', True, False)
     return df
 
 
-def save_data(output: str, train_df: pandas.core.frame.DataFrame,
-              test_df: pandas.core.frame.DataFrame):
+def save_data(output: str, train_df: pd.core.frame.DataFrame,
+              test_df: pd.core.frame.DataFrame):
     '''Save csv to output directory
     
     Args:
@@ -52,7 +52,6 @@ def main(input_dir: str, output_dir: str):
     
     save_data(output_dir, train_df, test_df)
     
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
