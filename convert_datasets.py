@@ -37,12 +37,16 @@ def save_data(output: str, train_df: pandas.core.frame.DataFrame,
         train_df(pandas.core.frame.DataFrame): dataframe of training set
         test_df(pandas.core.frame.DataFrame): dataframe of competition test set
     '''
-    train_df.to_csv('train.csv', index=False, encoding='utf-8')
+    Path(output).mkdir(parents=True, exist_ok=True)
 
-    test_df.to_csv('test.csv', index=False, encoding='utf-8')
+    train_df.to_csv(f'{output}/train.csv', index=False, encoding='utf-8')
+
+    test_df.to_csv(f'{output}/test.csv', index=False, encoding='utf-8')
 
 
 def main(input_dir: str, output_dir: str):
+    train_df = get_data(input_dir, 'train')
+    test_df = get_data(input_dir, 'competition_test')
     pass
 
 
