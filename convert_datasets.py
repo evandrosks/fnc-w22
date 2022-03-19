@@ -19,6 +19,8 @@ def get_data(path: str, name: str):
     
     data = stances.join(bodies.set_index('Body ID'), on='Body ID')
     
+    data['related'] = add_related_label(data)
+    
     return data
 
 
@@ -47,7 +49,7 @@ def save_data(output: str, train_df: pandas.core.frame.DataFrame,
 def main(input_dir: str, output_dir: str):
     train_df = get_data(input_dir, 'train')
     test_df = get_data(input_dir, 'competition_test')
-    pass
+    
 
 
 if __name__ == '__main__':
