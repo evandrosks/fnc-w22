@@ -2,6 +2,7 @@ import argparse
 import numpy as np
 import pandas as pd
 
+from pathlib import Path
 
 def get_data(path: str, name: str):
     '''Grabs stance and body csv files from original dataset and joins them
@@ -19,7 +20,7 @@ def get_data(path: str, name: str):
     
     data = stances.join(bodies.set_index('Body ID'), on='Body ID')
     
-    data['related'] = add_related_label(data)
+    data = add_related_label(data)
     
     return data
 
