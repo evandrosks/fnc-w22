@@ -42,6 +42,10 @@ def save_data(output: str, train_df: pandas.core.frame.DataFrame,
     test_df.to_csv('test.csv', index=False, encoding='utf-8')
 
 
+def main(input_dir: str, output_dir: str):
+    pass
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input-dir", help="path to input fake news challenge directory",
