@@ -18,4 +18,10 @@ def get_data(path: str, name: str):
     
     data = stances.join(bodies.set_index('Body ID'), on='Body ID')
     
-    return data    
+    return data
+
+
+def add_related_label(df: pandas.core.frame.DataFrame):
+    '''Adds column to dataframe whether body is related to stance'''
+    df['related'] = np.where(df['Stance']!= 'unrelated', True, False)
+    return df
