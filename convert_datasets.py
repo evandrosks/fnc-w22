@@ -50,6 +50,8 @@ def main(input_dir: str, output_dir: str):
     train_df = get_data(input_dir, 'train')
     test_df = get_data(input_dir, 'competition_test')
     
+    save_data(output_dir, train_df, test_df)
+    
 
 
 if __name__ == '__main__':
