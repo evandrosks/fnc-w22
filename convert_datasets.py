@@ -4,6 +4,7 @@ import pandas as pd
 
 from pathlib import Path
 
+
 def get_data(path: str, name: str):
     '''Grabs stance and body csv files from original dataset and joins them
        to one dataframe.
