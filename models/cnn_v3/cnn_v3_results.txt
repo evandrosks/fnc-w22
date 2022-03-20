@@ -1,0 +1,11 @@
+Loss: 0.6328
+Validation Loss: 0.5470
+Accuracy: 0.8096
+Validation Accuracy: 0.8419
+Test Accuracy: 0.7221
+Test Confusion Matrix (Vertical = true, Horizontal = predicted):
+           unrelated  discuss   agree  disagree
+unrelated     0.9252   0.0519  0.0229       0.0
+discuss       0.7097   0.2735  0.0168       0.0
+agree         0.8282   0.0909  0.0809       0.0
+disagree      0.9024   0.0588  0.0387       0.0
