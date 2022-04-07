@@ -28,7 +28,7 @@ def get_data(path: str, name: str):
 
 def add_related_label(df: pd.core.frame.DataFrame):
     '''Adds column to dataframe whether body is related to stance'''
-    df['related'] = np.where(df['Stance']!= 'unrelated', True, False)
+    df['related'] = np.where(df['Stance']!= 'unrelated', 'related', 'unrelated')
     return df
 
 
